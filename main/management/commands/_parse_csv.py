@@ -9,7 +9,7 @@ logging.basicConfig(level=logging.WARNING)
 TITLE_ROW = 'adult,belongs_to_collection,budget,genres,homepage,id,imdb_id,original_language,original_title,overview,popularity,poster_path,production_companies,production_countries,release_date,revenue,runtime,spoken_languages,status,tagline,title,video,vote_average,vote_count'
 FilmData = namedtuple('FilmData', TITLE_ROW.split(','))
 
-FILENAME = os.path.join(__file__,'..', 'movies_metadata.csv')
+FILENAME = os.path.normpath(os.path.join(__file__,'..', 'movies_metadata.csv'))
 
 
 def get_films_from_csv():
